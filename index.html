@@ -7,7 +7,12 @@
 <title>Sai Charan Suvarna | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-* {
+* html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+  {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -61,15 +66,14 @@ nav a:hover {
 /* HERO (keep original dark green gradient) */
 .hero {
   height: 100vh;
-  margin-left: 200px;
+  margin-left: 200px; /* for navbar */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
   padding: 20px;
-  background: linear-gradient(135deg, #0f2e24, #1f5f4a); /* original dark green gradient */
+  background: linear-gradient(135deg, #0f2e24, #1f5f4a);
 }
 
 .hero h1 {
@@ -299,3 +303,4 @@ window.addEventListener('scroll', () => {
 
 </body>
 </html>
+
