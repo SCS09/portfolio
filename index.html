@@ -61,7 +61,7 @@ nav a:hover {
 /* HERO */
 .hero {
   height: 100vh;
-  margin-left: 200px; /* account for sidebar */
+  margin-left: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,27 +72,12 @@ nav a:hover {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #0f2e24, #1f5f4a);
-}
-
-/* Hero parallax background */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-  opacity: 0.15;
-  z-index: 0;
-  transform: translateY(-50px);
+  border-radius: 20px;
 }
 
 .hero h1 {
   font-size: 64px;
   margin-bottom: 20px;
-  z-index: 1;
-  position: relative;
   background: linear-gradient(90deg, #4caf7d, #81c784);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -108,12 +93,10 @@ nav a:hover {
   max-width: 700px;
   font-size: 20px;
   color: #d7efe4;
-  z-index: 1;
-  position: relative;
+  margin-bottom: 30px;
 }
 
 .hero button {
-  margin-top: 30px;
   padding: 14px 32px;
   border: none;
   background: #4caf7d;
@@ -122,25 +105,25 @@ nav a:hover {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
-  z-index: 1;
-  position: relative;
 }
 
 .hero button:hover {
   background: #3a9c68;
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* SECTIONS */
 .section {
-  padding: 120px 60px;
-  max-width: 900px;
-  margin-left: 200px; /* account for sidebar */
-  margin-right: 40px;
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease-out;
+  border-radius: 20px;
+  background: #fff;
 }
 
 .section.visible {
@@ -155,17 +138,18 @@ nav a:hover {
 }
 
 /* ABOUT */
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+.about p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
 }
 
 /* SKILLS */
 .skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
 }
 
@@ -173,14 +157,15 @@ nav a:hover {
   background: white;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   border-left: 6px solid #2f7d60;
+  width: 220px;
   transition: 0.3s;
 }
 
 .skill:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 /* EXPERIENCE */
@@ -188,9 +173,11 @@ nav a:hover {
   background: white;
   padding: 28px;
   border-radius: 12px;
-  margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   border-left: 6px solid #2f7d60;
+  max-width: 700px;
+  text-align: center;
 }
 
 /* CONTACT */
@@ -210,7 +197,7 @@ footer {
 }
 
 /* RESPONSIVE */
-@media(max-width:900px) {
+@media(max-width:900px){
   nav {
     width: 100%;
     height: auto;
@@ -220,17 +207,18 @@ footer {
     top: 0;
   }
 
-  .section {
+  .hero {
     margin-left: 0;
-    padding: 80px 20px;
   }
 
-  .about {
-    grid-template-columns: 1fr;
+  .section {
+    margin: 20px;
+    padding: 60px 20px;
   }
 
-  .hero h1 {
-    font-size: 42px;
+  .skills {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>
@@ -255,34 +243,29 @@ footer {
 </section>
 
 <section class="section about" id="about">
-  <div>
-    <h2>About Me</h2>
-    <p>I am a motivated junior high school student based in Milton, Ontario. I enjoy helping others, learning new skills, and contributing to teams and community organizations.</p>
-    <br>
-    <p>Through my work as a Teaching Assistant at Kumon and my volunteer experience with the Milton Public Library and Royal Canadian Sea Cadets, I have developed strong communication, organization, and teamwork skills.</p>
-    <br>
-    <p>I take pride in maintaining attention to detail, staying organized, and completing tasks efficiently in fast-paced environments.</p>
-  </div>
+  <h2>About Me</h2>
+  <p>I am a motivated high school student with hands-on experience assisting students and community programs. Through my work as a Teaching Assistant at Kumon, volunteering at the Milton Public Library, and participating in the Royal Canadian Sea Cadets, I have developed strong skills in teamwork, communication, attention to detail, and problem-solving.</p>
+  <p>I thrive in fast-paced environments, enjoy helping others, and am eager to bring my action-oriented, customer-focused approach to in-store merchandising projects at The Home Depot. My ability to follow instructions, stay organized, and complete tasks efficiently ensures high-quality results in any team setting.</p>
 </section>
 
 <section class="section" id="skills">
   <h2>Core Skills</h2>
   <div class="skills">
-    <div class="skill"><h3>Communication</h3><p>Clear communication skills developed through teaching, volunteering, and leadership roles.</p></div>
-    <div class="skill"><h3>Teamwork</h3><p>Strong ability to collaborate with groups and work toward shared goals.</p></div>
-    <div class="skill"><h3>Customer Service</h3><p>Experience helping students, parents, and community members effectively.</p></div>
-    <div class="skill"><h3>Attention to Detail</h3><p>Careful and organized when completing tasks and handling responsibilities.</p></div>
-    <div class="skill"><h3>Multitasking</h3><p>Able to manage multiple tasks efficiently in busy environments.</p></div>
-    <div class="skill"><h3>Leadership</h3><p>Leadership development through Royal Canadian Sea Cadets program.</p></div>
+    <div class="skill"><h3>Communication</h3><p>Clear communication developed through teaching, volunteering, and leadership roles.</p></div>
+    <div class="skill"><h3>Teamwork</h3><p>Collaborates effectively with groups and works toward shared goals.</p></div>
+    <div class="skill"><h3>Customer Service</h3><p>Experience assisting students, parents, and community members effectively.</p></div>
+    <div class="skill"><h3>Attention to Detail</h3><p>Maintains high-quality work by being organized and thorough.</p></div>
+    <div class="skill"><h3>Multitasking</h3><p>Manages multiple tasks efficiently in fast-paced environments.</p></div>
+    <div class="skill"><h3>Leadership</h3><p>Leadership experience from Royal Canadian Sea Cadets, mentoring and guiding peers.</p></div>
   </div>
 </section>
 
 <section class="section" id="experience">
   <h2>Experience</h2>
-  <div class="job"><h3>Kumon – Teaching Assistant</h3><p>Worked with students from diverse backgrounds to help improve their academic skills in mathematics and reading. Prepared educational materials and supported learning activities while maintaining an organized environment.</p></div>
-  <div class="job"><h3>Milton Public Library – Teen Advisory Group</h3><p>Volunteered in reading club and LEGO programs to help children develop creativity and learning skills while supporting community events and youth programs.</p></div>
-  <div class="job"><h3>Royal Canadian Sea Cadets – Leading Cadet</h3><p>Participated in fundraising and leadership activities including tagging events that supported cadet programs. Developed teamwork, discipline, and leadership abilities.</p></div>
-  <div class="job"><h3>Glen Eden Snow School – Instructor</h3><p>Provided instruction and guidance to students learning snowboarding while ensuring safety and positive learning experiences on the hill.</p></div>
+  <div class="job"><h3>Kumon – Teaching Assistant</h3><p>Assisted students from diverse backgrounds to improve math and reading skills. Prepared learning materials and maintained organized environments.</p></div>
+  <div class="job"><h3>Milton Public Library – Volunteer</h3><p>Supported reading and LEGO programs for children. Ensured smooth program execution and collaborated with staff.</p></div>
+  <div class="job"><h3>Royal Canadian Sea Cadets – Leading Cadet</h3><p>Participated in leadership activities and fundraising projects, developing teamwork and mentoring skills.</p></div>
+  <div class="job"><h3>Glen Eden Snow School – Instructor</h3><p>Instructed students in snowboarding, maintaining safety and creating positive learning experiences.</p></div>
 </section>
 
 <section class="section" id="contact">
